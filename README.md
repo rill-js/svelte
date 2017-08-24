@@ -48,6 +48,7 @@ const app = Rill()
 
 // Setup the document template.
 app.get(page
+  .html({ lang: 'en' })
   .meta({ charset: 'utf8' })
   .title('My Svelte App')
   .meta({ name: 'author', content: 'Dylan Piercey' })
