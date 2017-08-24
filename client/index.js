@@ -26,14 +26,21 @@ module.exports = function svelteMiddlewareSetup (options) {
         res.get('Location')
         ) return
 
-      if (active) active.destroy(false)
       if (res.status === 404) res.status = 200
       res.set('Content-Type', 'text/html; charset=UTF-8')
       res.body = ' '
 
+      if (active) {
+        // Try updating component if it is the same.
+        if (active instanceof Component) return active.set(locals)
+        // Otherwise remove it from the dom.
+        else active.destroy(true)
+      }
+
+      // Insert new component.
       active = new Component({
         target: target,
-        hydrate: true,
+        hydrate: !active, // Only hydrate initial render.
         data: locals
       })
     })

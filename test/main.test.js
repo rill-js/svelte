@@ -45,6 +45,12 @@ describe('Rill/Svelte', function () {
           ctx.res.body = View
           return next()
         })
+        .get('/update', function (ctx, next) {
+          ctx.locals.req = ctx.req
+          ctx.locals.hello = 'again'
+          ctx.res.body = View
+          return next()
+        })
         .listen()
     )
 
@@ -58,5 +64,17 @@ describe('Rill/Svelte', function () {
         )
       })
       .expect('content-type', 'text/html; charset=UTF-8')
+      .then(function () {
+        return request
+          .get('/update')
+          .expect(200)
+          .expect(function (res) {
+            assert.equal(
+              document.body.innerHTML,
+              '<div>again 127.0.0.1</div>'
+            )
+          })
+          .expect('content-type', 'text/html; charset=UTF-8')
+      })
   })
 })
