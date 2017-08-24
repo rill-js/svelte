@@ -1,7 +1,7 @@
 {
   "name": "@rill/svelte",
   "description": "Svelte views for Rill.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
   "browser": "client/index.js",
   "bugs": "https://github.com/rill-js/svelte/issues",
