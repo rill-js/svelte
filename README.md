@@ -2,8 +2,8 @@
   <!-- Logo -->
   <img src="https://raw.githubusercontent.com/rill-js/rill/master/Rill-Icon.jpg" alt="Rill"/>
   <br/>
-  @rill/svelte [WIP]
-	<br/>
+  @rill/svelte
+  <br/>
 
   <!-- Stability -->
   <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
@@ -28,6 +28,7 @@
 </h1>
 
 Universal [Svelte](http://svelte.technology) rendering middleware for [Rill](https://github.com/rill-js/rill).
+It is recommended to combine this middleware with [@rill/page](https://github.com/rill-js/page) as seen below to facilitate full page isomorphic rendering with svelte.
 
 # Installation
 
