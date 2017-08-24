@@ -8,7 +8,7 @@ var statuses = require('statuses')
  * @param {object} options - The options for the middleware.
  * @return {function}
  */
-module.exports = function svelteMiddlewareSetup (opts) {
+module.exports = function svelteMiddlewareSetup (options) {
   return function svelteMiddleware (ctx, next) {
     return next().then(function renderSvelteComponent () {
       var res = ctx.res
