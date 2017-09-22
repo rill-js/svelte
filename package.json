@@ -11,12 +11,12 @@
   "devDependencies": {
     "jsdom": "^11.2.0",
     "jsdom-global": "^3.0.2",
-    "mocha": "^3.5.0",
+    "mocha": "^3.5.3",
     "rill": "^5.0.15",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
     "supertest": "^3.0.0",
-    "svelte": "^1.30.0"
+    "svelte": "^1.40.0"
   },
   "homepage": "https://github.com/rill-js/svelte",
   "keywords": [
