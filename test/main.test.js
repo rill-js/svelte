@@ -19,6 +19,7 @@ describe('Rill/Svelte', function () {
           return next()
         })
         .listen()
+        .unref()
     )
 
     return request
@@ -52,6 +53,7 @@ describe('Rill/Svelte', function () {
           return next()
         })
         .listen()
+        .unref()
     )
 
     return request
